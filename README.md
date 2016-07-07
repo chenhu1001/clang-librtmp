@@ -1,1 +1,1 @@
-The latest rtmp lib for iOS. Support bitcode.
+The latest rtmp lib for iOS. Support bitcode and ipv6.
