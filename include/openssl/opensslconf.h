@@ -122,8 +122,8 @@ extern "C" {
 
 #if !(defined(VMS) || defined(__VMS)) /* VMS uses logical names instead */
 #if defined(HEADER_CRYPTLIB_H) && !defined(OPENSSLDIR)
-#define ENGINESDIR "/Users/chenhu/Desktop/librtmp-iOS/build/openssl-iPhoneSimulator9.3-i386.sdk/lib/engines"
-#define OPENSSLDIR "/Users/chenhu/Desktop/librtmp-iOS/build/openssl-iPhoneSimulator9.3-i386.sdk"
+#define ENGINESDIR "/Users/chenhu/Desktop/librtmp/librtmp-ipv6-bitcode/build/openssl-iPhoneSimulator9.3-i386.sdk/lib/engines"
+#define OPENSSLDIR "/Users/chenhu/Desktop/librtmp/librtmp-ipv6-bitcode/build/openssl-iPhoneSimulator9.3-i386.sdk"
 #endif
 #endif
 

@@ -122,7 +122,7 @@ do
   fi
 
 	# add -isysroot to CC=
-	sed -ie "s!^CFLAG=!CFLAG=-isysroot ${CROSS_TOP}/Platforms/${PLATFORM}.platform/Developer/SDKs/${CROSS_SDK} -miphoneos-version-min=7.0 !" "Makefile"
+	sed -ie "s!^CFLAG=!CFLAG=-isysroot ${CROSS_TOP}/Platforms/${PLATFORM}.platform/Developer/SDKs/${CROSS_SDK} -miphoneos-version-min=7.0 -fembed-bitcode !" "Makefile"
   
 	make >> "${LOG}" 2>&1
 	make install >> "${LOG}" 2>&1

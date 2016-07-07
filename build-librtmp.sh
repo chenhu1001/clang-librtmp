@@ -68,7 +68,7 @@ echo 'Clone librtmp git repository'
 # Remove the directory if already exist
 rm -rf "${SRCPATH}/rtmpdump"
 
-git clone ${LIBRTMPREPO} src/rtmpdump
+git clone -b ipv6_support https://github.com/saiten/rtmpdump.git src/rtmpdump
 cd "${SRCPATH}/rtmpdump/librtmp"
 
 LIBRTMP_REPO=""
@@ -95,7 +95,7 @@ do
 	echo "CC=\$(CROSS_COMPILE)gcc -arch ${ARCH}" >> "Makefile"
   
 	export CROSS_COMPILE="${DEVELOPER}/usr/bin/"  
-  export XCFLAGS="-isysroot ${CROSS_TOP}/SDKs/${CROSS_SDK} -miphoneos-version-min=7.0 -I${INCLUDEPATH} -arch ${ARCH}"
+  export XCFLAGS="-isysroot ${CROSS_TOP}/SDKs/${CROSS_SDK} -miphoneos-version-min=7.0 -fembed-bitcode -I${INCLUDEPATH} -arch ${ARCH}"
       
   if [ "${ARCH}" == "i386" ] || [ "${ARCH}" == "x86_64" ];
   then
